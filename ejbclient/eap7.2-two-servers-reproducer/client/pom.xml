@@ -20,7 +20,7 @@
         <dependency> <!-- this is ejb client from EAP 7.1.0 -->
            <groupId>org.wildfly</groupId>
             <artifactId>wildfly-ejb-client-bom</artifactId>
-            <version>14.0.0.Final</version>
+            <version>15.0.0.Final</version>
             <type>pom</type>        
         </dependency>
 
