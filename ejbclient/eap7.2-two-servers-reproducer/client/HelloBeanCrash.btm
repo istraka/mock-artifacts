@@ -1,0 +1,12 @@
+RULE JVM crash on hello method
+
+CLASS ejb.HelloBean
+
+METHOD hello
+
+AT ENTRY
+IF true
+
+DO killJVM()
+
+ENDRULE

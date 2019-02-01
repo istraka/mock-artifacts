@@ -1,0 +1,15 @@
+- unzip 2x EAP distro
+- build server
+- on the first :  export JAVA_OPTS="-Djboss.modules.system.pkgs=org.jacoco,org.jboss.byteman -javaagent:/home/istraka/tools/byteman-download-4.0.5/lib/byteman.jar=script:HelloBeanCrash.btm,boot:/home/istraka/tools/byteman-download-4.0.5/lib/byteman.jar"
+             ./bin/standalone.sh -c standalone-full.xml
+             deploy as server-1.jar
+
+- on the second: ./bin/standalone.sh -c standalone-full.xml -Djboss.socket.binding.port-offset=100
+             deploy as server-2.jar
+
+- run client side using mvn exec:exec
+- during countdown (you have 30 seconds) run on the first:
+    unset JAVA_OPTS
+    ./bin/standalone.sh -c standalone-full.xml
+
+
