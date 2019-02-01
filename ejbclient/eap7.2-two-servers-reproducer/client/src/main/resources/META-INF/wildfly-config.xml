@@ -1,0 +1,8 @@
+<configuration>
+    <jboss-ejb-client xmlns="urn:jboss:wildfly-client-ejb:3.0">
+        <connections>
+            <connection uri="remote+http://127.0.0.1:8080" /> 
+            <connection uri="remote+http://127.0.0.1:8180" />
+        </connections>
+    </jboss-ejb-client>
+</configuration>
